@@ -1,0 +1,22 @@
+LIBRARY trackdll
+
+DESCRIPTION 'Track DLL for EDictionary'
+
+EXETYPE WINDOWS
+
+CODE	  PRELOAD MOVEABLE DISCARDABLE
+DATA	  PRELOAD
+
+HEAPSIZE  1024
+
+SEGMENTS
+    FIXEDSEG   FIXED PRELOAD
+
+SECTIONS
+	SHARDATA   Read Write Shared
+
+EXPORTS
+    SpyGetMsgProc       @2
+    SpyCallWndProc      @3
+	InstallHook               @4
+	UninstallHook           @5

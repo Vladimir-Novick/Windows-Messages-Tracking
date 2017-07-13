@@ -1,0 +1,28 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: trackdll - Win32 Debug--------------------
+</h3>
+
+
+Microsoft (R) Program Maintenance Utility   Version 6.00.8168.0
+Copyright (C) Microsoft Corp 1988-1998. All rights reserved.
+
+ cl -Gz -c -W3 -DCRTAPI1=_cdecl -DCRTAPI2=_cdecl -nologo -D_X86_=1 -D_WINNT -D_WIN32_WINNT=0x0400 -D_WIN32_IE=0x0300 -DWINVER=0x0400 -DWIN32  -D_WIN32 -D_MT -D_DLL -MD -Z7 -Od trackdll.c
+trackdll.c
+ lib -machine:i386      -def:trackdll.def            trackdll.obj                 -out:trackdll.lib
+Microsoft (R) Library Manager Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+
+   Creating library trackdll.lib and object trackdll.exp
+ link -debug:full -debugtype:cv /NODEFAULTLIB /INCREMENTAL:NO /PDB:NONE /RELEASE /NOLOGO -entry:_DllMainCRTStartup@12 -dll      -base:0x1C000000   -out:trackdll.dll    trackdll.exp trackdll.obj msvcrt.lib oldnames.lib kernel32.lib  ws2_32.lib mswsock.lib advapi32.lib user32.lib gdi32.lib comdlg32.lib winspool.lib
+
+
+
+<h3>Results</h3>
+trackdll.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
